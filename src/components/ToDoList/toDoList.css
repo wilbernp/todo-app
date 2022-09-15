@@ -1,0 +1,33 @@
+.container-todo-list{
+    background-color: var(--Very-Dark-Desaturated-Blue);
+    border-radius: 5px;
+    margin-bottom: 1.2rem;
+}
+
+.todo-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .7rem 1.3rem;
+    border-bottom: .13rem var(--Very-Dark-Grayish-Blue) solid;
+}
+
+.delete-todo{
+    color: var(--Very-Dark-Grayis-Blue);
+    text-decoration: none;
+}
+
+.footer-todo-list{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.4rem 1.3rem;
+}
+
+.info-footer-todo{
+    color: var(--Dark-Grayish-Blue);
+    font-size: .75em;
+}
+
+.clear-complete-todos{
+    text-decoration: none;
+}

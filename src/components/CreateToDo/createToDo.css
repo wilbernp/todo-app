@@ -1,0 +1,40 @@
+.form-create-todo{
+    margin-bottom: 1.2rem;
+}
+
+.title-create-todo{
+    letter-spacing: .2em;
+    margin-bottom: 1.4rem;
+    color: white;
+}
+
+.container-input-create{
+    position: relative;
+
+}
+
+.input-text-create{
+    width: 100%;
+    padding: 1.2rem 0 1.2rem 4rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: var(--Very-Dark-Desaturated-Blue);
+}
+
+::placeholder {
+    color: var(--Dark-Grayish-Blue);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.25em;
+  }
+
+.container-checkbox-create{
+    position: absolute;
+    height: max-content;
+    top: 0;
+    bottom: 0;
+    left: 1.3rem;
+    margin: auto 0;
+}
+
+  

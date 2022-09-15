@@ -1,0 +1,21 @@
+.container-filter-todo{
+    display: flex;
+    justify-content: center;
+    background-color: var(--Very-Dark-Desaturated-Blue);
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 2.5rem;
+}
+.filter-todo{
+    text-decoration: none;
+    margin: 0 .65rem;
+    color: var(--Dark-Grayish-Blue);
+    font-size: .8em;
+    font-weight: 700;
+}
+
+.parragraph-drag-drop{
+    text-align: center;
+    color: var(--Dark-Grayish-Blue);
+    font-size: .85em;
+}
