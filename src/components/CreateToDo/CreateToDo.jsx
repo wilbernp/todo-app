@@ -1,20 +1,44 @@
 import React, { useState } from 'react'
 import Checkbox from '../Checkbox/Checkbox'
 import "./createToDo.css"
+import { v4 as uuidv4 } from 'uuid';
+import { useDispatch, useSelector } from 'react-redux';
+import {createTodo, handleCompleteAll} from "../../redux/slices/todosSlice"
+
 export default function CreateToDo() {
+
   const [active, setActive] = useState(false)
-  function handleActive(bool){
-    setActive(bool)
+  const [input, setInput] = useState("")
+  let dispatch = useDispatch()
+  let {todos} = useSelector(state => state.todos)
+
+  function handleActive(bool) {
+      setActive(bool)
+      dispatch(handleCompleteAll(bool))
   }
+
+  function handleSubmit(e) {
+    e.preventDefault()
+    if (input.length) {
+      let newTodo = {
+        id: uuidv4(),
+        title: input,
+        complete: false
+      }
+      setInput("")
+      dispatch(createTodo(newTodo))
+    }
+  }
+
   return (
-    <form className='form-create-todo'>
+    <form className='form-create-todo' onSubmit={handleSubmit}>
       <h1 className='title-create-todo'>TODO</h1>
       <div className='container-input-create'>
         <div>
-          <input className='input-text-create' type="text" placeholder='Create a new todo...'/>
+          <input className='input-text-create' type="text" placeholder='Create a new todo...' value={input} onChange={(e) => setInput(e.target.value)} />
         </div>
         <div className='container-checkbox-create'>
-          <Checkbox handleActive={handleActive} active={active}/>
+          <Checkbox handleActive={handleActive} active={active && todos.length} />
         </div>
       </div>
     </form>

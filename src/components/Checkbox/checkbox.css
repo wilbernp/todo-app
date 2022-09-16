@@ -1,6 +1,7 @@
 .container-items-checkbox{
    display: flex;
    align-items: center;
+   margin-right: 10px;
 }
 
 .checkbox{
@@ -18,13 +19,6 @@
 
 .checkbox-active > .check{
     opacity: 1;
-}
-
-.label-checkbox{
-    padding: 5px 0 0 10px;
-    color: var(--Light-Grayish-Blue);
-    font-size: .75em;
-    margin-right: 1rem;
 }
 
 .check{
