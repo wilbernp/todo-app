@@ -7,13 +7,13 @@ import {createTodo, handleCompleteAll} from "../../redux/slices/todosSlice"
 
 export default function CreateToDo() {
 
-  const [active, setActive] = useState(false)
+  // const [active, setActive] = useState(false)
   const [input, setInput] = useState("")
   let dispatch = useDispatch()
-  let {todos} = useSelector(state => state.todos)
+  let {todos, activeChecbox} = useSelector(state => state.todos)
 
   function handleActive(bool) {
-      setActive(bool)
+      // setActive(bool)
       dispatch(handleCompleteAll(bool))
   }
 
@@ -38,7 +38,7 @@ export default function CreateToDo() {
           <input className='input-text-create' type="text" placeholder='Create a new todo...' value={input} onChange={(e) => setInput(e.target.value)} />
         </div>
         <div className='container-checkbox-create'>
-          <Checkbox handleActive={handleActive} active={active && todos.length} />
+          <Checkbox handleActive={handleActive} active={activeChecbox} />
         </div>
       </div>
     </form>
