@@ -8,4 +8,11 @@
 }
 
 
+@media(min-width:376px){
+    .app-container{
+        background-image: url("./assets/images/bg-desktop-dark.jpg");
+    }
+}
+
+
 

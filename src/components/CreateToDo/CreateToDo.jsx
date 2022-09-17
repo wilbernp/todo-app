@@ -3,18 +3,18 @@ import Checkbox from '../Checkbox/Checkbox'
 import "./createToDo.css"
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch, useSelector } from 'react-redux';
-import {createTodo, handleCompleteAll} from "../../redux/slices/todosSlice"
+import {createTodo, handleActiveCheckbox, handleCompleteAll} from "../../redux/slices/todosSlice"
 
 export default function CreateToDo() {
 
   // const [active, setActive] = useState(false)
   const [input, setInput] = useState("")
   let dispatch = useDispatch()
-  let {todos, activeChecbox} = useSelector(state => state.todos)
+  let {activeChecbox} = useSelector(state => state.todos)
 
   function handleActive(bool) {
-      // setActive(bool)
       dispatch(handleCompleteAll(bool))
+      
   }
 
   function handleSubmit(e) {

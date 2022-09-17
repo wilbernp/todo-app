@@ -1,12 +1,22 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { clearTodosCompleted, deleteTodo, handleComplete } from '../../redux/slices/todosSlice'
+import { clearTodosCompleted, deleteTodo, handleActiveCheckbox, handleComplete } from '../../redux/slices/todosSlice'
 import Checkbox from '../Checkbox/Checkbox'
 import "./toDoList.css"
 export default function ToDoList() {
     let dispatch = useDispatch()
     let {todos} = useSelector(state => state.todos)
     let items_left = todos.filter(todo=>!todo.complete);
+
+    function handleActive(bool, id){
+        dispatch(handleComplete({bool, id}))
+        dispatch(handleActiveCheckbox())
+    }
+
+    function handleDelete(id){
+        dispatch(deleteTodo(id))
+        dispatch(handleActiveCheckbox())
+    }
     
     return (
         <div className={`container-todo-list ${!todos.length && "container-todo-center"}`}>
@@ -14,9 +24,9 @@ export default function ToDoList() {
            todos.length? todos.map((toDo) =>{
                 return(
                     <div className='todo-item' key={toDo.id}>
-                        <Checkbox handleActive={(bool)=>dispatch(handleComplete({bool, id:toDo.id}))} active={toDo.complete}/>
+                        <Checkbox handleActive={(bool)=> handleActive(bool, toDo.id)} active={toDo.complete}/>
                         <label className={`label-checkbox ${toDo.complete && "label-checkbox-complete"}`}>{toDo.title}</label>
-                        <a className='delete-todo' onClick={()=>dispatch(deleteTodo(toDo.id))}>X</a>
+                        <a className='delete-todo' onClick={()=>handleDelete(toDo.id)}>X</a>
                     </div>
                 )
             }):<h2 className='not-todo-text'>There is not todo</h2>
