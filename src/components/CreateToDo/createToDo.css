@@ -2,10 +2,21 @@
     margin-bottom: 1.2rem;
 }
 
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+}
+
 .title-create-todo{
     letter-spacing: .2em;
     margin-bottom: 1.4rem;
     color: white;
+}
+
+.icon-dark-light-mode{
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
 }
 
 .container-input-create{
@@ -26,6 +37,10 @@
     caret-color: var(--Light-Grayish-Blue);
 }
 
+.input-text-create-light{
+    background-color: var(--Very-Light-Gray);
+}
+
 ::placeholder {
     color: var(--Dark-Grayish-Blue);
     font-family: 'Josefin Sans', sans-serif;
@@ -40,5 +55,8 @@
     left: 1.3rem;
     margin: auto 0;
 }
+
+
+/*  */
 
   

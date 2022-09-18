@@ -5,7 +5,8 @@ const initialState = {
     activeChecbox: false,
     filterTodos: [],
     typeFilter: "All",
-    message:""
+    message:"",
+    lightMode:true
 }
 
 const reducers = {
@@ -80,7 +81,11 @@ const reducers = {
             default:
                 break;
         }
+    },
+    handleLightMode: (state) =>{
+        state.lightMode = !state.lightMode
     }
+
 
 }
 
@@ -98,9 +103,7 @@ export const {
     handleCompleteAll,
     clearTodosCompleted,
     handleActiveCheckbox,
-    handleFilterTodo
-    // filterTodoAll,
-    // filterTodoActive,
-    // filterTodoComplete
+    handleFilterTodo,
+    handleLightMode
 } = todosSlice.actions;
 export default todosSlice.reducer

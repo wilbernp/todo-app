@@ -1,10 +1,40 @@
-.app-container{
+.app-container {
     max-width: 100vw;
     padding: 40px 25px;
+    background: var(--Very-Dark-Blue) url("./assets/images/bg-mobile-dark.jpg") no-repeat;
+}
+
+.app-container-light{
+    background: var(--Very-Light-Grayish-Blue) url("./assets/images/bg-mobile-light.jpg") no-repeat;
+}
+
+@media(min-width:376px) {
+    .app-container {
+        background-size: 100% 33vh;
+        background-image: url("./assets/images/bg-desktop-dark.jpg");
+    }
+
+    .app-container-light {
+        background-size: 100% 33vh;
+        background-image: url("./assets/images/bg-desktop-light.jpg");
+    }
+
+    .components-container {
+        width: auto;
+    }
+}
+
+@media(min-width:500px) {
+    .components-container {
+        margin: 0 auto;
+        width: 450px;
+    }
 }
 
 
-
-
-
-
+@media(min-width:700px) {
+    .components-container {
+        margin: 0 auto;
+        width: 520px;
+    }
+}

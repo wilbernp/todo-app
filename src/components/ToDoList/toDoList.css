@@ -7,6 +7,10 @@
     flex-direction: column;
 }
 
+.container-todo-list-light{
+    background-color: var(--Very-Light-Gray);
+}
+
 .container-todo-center{
     flex-direction: row;
     align-items: center;
@@ -25,6 +29,12 @@
     padding: .7rem 1.3rem;
     border-bottom: .13rem var(--Very-Dark-Grayish-Blue) solid;
     word-wrap: break-word;
+    color: var(--Light-Grayish-Blue);
+}
+
+.todo-item-light{
+    border-bottom: .13rem var(--Very-Light-Grayish-Blue) solid;
+    color: var(--Very-Dark-Grayish-Blue);
 }
 
 
@@ -34,7 +44,7 @@
     color: var(--Light-Grayish-Blue);
     font-size: .75em;
     line-height: 1.1em;
-    
+    color: inherit;
 }
 
 .label-checkbox-complete{
