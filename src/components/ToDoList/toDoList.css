@@ -5,6 +5,7 @@
     min-height: 65vh;
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
 }
 
 .container-todo-center{
@@ -40,7 +41,16 @@
     color: var(--Very-Dark-Grayis-Blue);
 }
 
-.delete-todo{
+.container-buttons-change{
+    margin-right: 50px;
+    background-color: aqua;
+    /* display: flex; */
+    width: max-content;
+    /* margin: 100px; */
+}
+
+.button-change-todo{
+    display: inline-block;
     padding-top: .2em;
     color: var(--Very-Dark-Grayis-Blue);
     text-decoration: none;

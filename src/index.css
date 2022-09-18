@@ -32,5 +32,9 @@ body{
   font-size: 18px;
 }
 
+a, button{
+  cursor: pointer;
+}
+
 
 
