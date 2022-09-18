@@ -2,19 +2,50 @@
     background-color: var(--Very-Dark-Desaturated-Blue);
     border-radius: 5px;
     margin-bottom: 1.2rem;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-todo-center{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.not-todo-text{
+    text-align: center;
+    color: var(--Dark-Grayish-Blue);
 }
 
 .todo-item{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 15% 80% 5%;
     align-items: center;
     padding: .7rem 1.3rem;
     border-bottom: .13rem var(--Very-Dark-Grayish-Blue) solid;
+    word-wrap: break-word;
 }
 
-.delete-todo{
+
+.label-checkbox{
+    margin-right: 1rem;
+    padding-top: .2em;
+    color: var(--Light-Grayish-Blue);
+    font-size: .75em;
+    line-height: 1.1em;
+    
+}
+
+.label-checkbox-complete{
+    text-decoration: line-through;
+    color: var(--Very-Dark-Grayis-Blue);
+}
+
+.button-delete-todo{
     color: var(--Very-Dark-Grayis-Blue);
     text-decoration: none;
+    padding-top: .2em;
 }
 
 .footer-todo-list{

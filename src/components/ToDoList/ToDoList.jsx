@@ -1,36 +1,56 @@
 import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { clearTodosCompleted, deleteTodo, handleActiveCheckbox, handleComplete } from '../../redux/slices/todosSlice'
 import Checkbox from '../Checkbox/Checkbox'
 import "./toDoList.css"
-let toDos = [
-    {title: "Complete online JavaScript course", complete:true},
-    {title: "Jog around the park 3x", complete:false},
-    {title: "10 minutes meditation", complete:false},
-    {title: "Read for 1 hour", complete:false},
-    {title: "Pick up graceries", complete:false},
-    {title: "Complete Todo App Frontend Mentor Complete Todo App Frontend Mentor", complete:false}
-    
-]
 export default function ToDoList() {
-    const [active, setActive] = useState(false)
-    function handleActive(bool){
-        setActive(bool)
+    let dispatch = useDispatch()
+    let { filterTodos, message } = useSelector(state => state.todos)
+    let items_left = filterTodos.filter(todo => !todo.complete);
+
+    function handleActive(bool, id) {
+        dispatch(handleComplete({ bool, id }))
+        dispatch(handleActiveCheckbox())
     }
-  return (
-    <div className='container-todo-list'>
-        {
-            toDos.map((toDo) =>{
-                return(
-                    <div className='todo-item'>
-                        <Checkbox label={toDo.title} handleActive={handleActive} active={active}/>
-                        <a className='delete-todo'>X</a>
-                    </div>
-                )
-            })
-        }
-        <div className='footer-todo-list'>
-        <span className='info-footer-todo'>{toDos.length} items left</span>
-        <a className='info-footer-todo'>Clear Completed</a>
+
+    function handleDelete(id) {
+        dispatch(deleteTodo(id))
+    }
+
+    return (
+        <div className={`container-todo-list ${!filterTodos.length && "container-todo-center"}`}>
+            {
+                filterTodos.length ? filterTodos.map((toDo) => {
+                    return (
+                        <div
+                            className='todo-item'
+                            key={toDo.id}>
+                            <Checkbox handleActive={(bool) =>
+                                handleActive(bool, toDo.id)}
+                                active={toDo.complete} />
+                            <label
+                                className={`label-checkbox 
+                                    ${toDo.complete &&
+                                    "label-checkbox-complete"}`}
+                            >
+                                {toDo.title}
+                            </label>
+                            <a className='button-delete-todo'
+                                onClick={() => handleDelete(toDo.id)}
+                            >X</a>
+
+                        </div>
+                    )
+                }) : <h2 className='not-todo-text'>{message}</h2>
+
+            }
+
+            {filterTodos.length ? <div className='footer-todo-list'>
+                <span className='info-footer-todo'>{items_left.length} items left</span>
+                <a className='info-footer-todo' onClick={() => dispatch(clearTodosCompleted())}>Clear Completed</a>
+            </div> : null
+            }
         </div>
-    </div>
-  )
+    )
 }
+
