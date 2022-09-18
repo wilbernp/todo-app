@@ -2,10 +2,9 @@
     background-color: var(--Very-Dark-Desaturated-Blue);
     border-radius: 5px;
     margin-bottom: 1.2rem;
-    min-height: 65vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
 }
 
 .container-todo-center{
@@ -15,6 +14,7 @@
 }
 
 .not-todo-text{
+    text-align: center;
     color: var(--Dark-Grayish-Blue);
 }
 
@@ -24,6 +24,7 @@
     align-items: center;
     padding: .7rem 1.3rem;
     border-bottom: .13rem var(--Very-Dark-Grayish-Blue) solid;
+    word-wrap: break-word;
 }
 
 
@@ -41,19 +42,10 @@
     color: var(--Very-Dark-Grayis-Blue);
 }
 
-.container-buttons-change{
-    margin-right: 50px;
-    background-color: aqua;
-    /* display: flex; */
-    width: max-content;
-    /* margin: 100px; */
-}
-
-.button-change-todo{
-    display: inline-block;
-    padding-top: .2em;
+.button-delete-todo{
     color: var(--Very-Dark-Grayis-Blue);
     text-decoration: none;
+    padding-top: .2em;
 }
 
 .footer-todo-list{
@@ -70,4 +62,3 @@
 .clear-complete-todos{
     text-decoration: none;
 }
-

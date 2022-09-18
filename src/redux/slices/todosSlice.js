@@ -12,6 +12,7 @@ const reducers = {
     createTodo: (state, { payload }) => {
         state.todos.unshift(payload)
         state.activeChecbox = false
+        state.typeFilter = "All"
     },
     handleComplete: (state, { payload }) => {
 

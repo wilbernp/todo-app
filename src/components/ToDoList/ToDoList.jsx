@@ -32,18 +32,12 @@ export default function ToDoList() {
                                 className={`label-checkbox 
                                     ${toDo.complete &&
                                     "label-checkbox-complete"}`}
-                                    >
-                                    {toDo.title}
+                            >
+                                {toDo.title}
                             </label>
-                            <a className='button-change-todo'
-                                onClick={() => handleDelete(toDo.id)}>X</a>
-
-                            {/* <div className='container-buttons-change'>
-                            <a className='button-change-todo'
-                                onClick={() => handleDelete(toDo.id)}>Edit</a>
-                            <a className='button-change-todo'
-                                onClick={() => handleDelete(toDo.id)}>X</a>
-                            </div> */}
+                            <a className='button-delete-todo'
+                                onClick={() => handleDelete(toDo.id)}
+                            >X</a>
 
                         </div>
                     )
