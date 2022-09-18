@@ -8,8 +8,8 @@ import { getItemLocalStorage, setItemLocalStorage } from './localStorage/localSt
 import { handleFilterTodo, setTodos } from './redux/slices/todosSlice'
 export default function App() {
   let dispatch = useDispatch()
-  let {todos, typeFilter} = useSelector(state => state.todos)
-  
+  let { todos, typeFilter, lightMode } = useSelector(state => state.todos)
+
   useEffect(() => {
     console.log("useefect1")
     let todoList = getItemLocalStorage("todos")
@@ -18,18 +18,19 @@ export default function App() {
 
   useEffect(() => {
     console.log("useefect2")
-    // if (!filterActive) {
-      dispatch(handleFilterTodo(typeFilter))
-      setItemLocalStorage("todos", todos)
-    // }
+    dispatch(handleFilterTodo(typeFilter))
+    setItemLocalStorage("todos", todos)
   }, [todos])
-  
-  
+
+
+
   return (
-    <div className='app-container'>
-      <CreateToDo/>
-      <ToDoList/>
-      <FilterToDo/> 
+    <div className={`app-container ${lightMode && "app-container-light"}`}>
+      <div className="components-container">
+        <CreateToDo />
+        <ToDoList />
+        <FilterToDo />
+      </div>
     </div>
   )
 }

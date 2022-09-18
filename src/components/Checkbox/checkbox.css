@@ -13,8 +13,13 @@
     cursor: pointer;
 }
 
+.checkbox-light{
+    border: 2px solid var(--Light-Grayish-Blue);
+}
+
 .checkbox-active{
-    background: var(--Check-Background)
+    background: var(--Check-Background);
+    border: 1px solid var(--Check-Background);
 }
 
 .checkbox-active > .check{
