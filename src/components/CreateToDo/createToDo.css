@@ -37,15 +37,23 @@
     caret-color: var(--Light-Grayish-Blue);
 }
 
-.input-text-create-light{
-    background-color: var(--Very-Light-Gray);
-}
-
-::placeholder {
+.input-text-create::placeholder {
     color: var(--Dark-Grayish-Blue);
     font-family: 'Josefin Sans', sans-serif;
     font-size: .85em;
-  }
+}
+
+.input-text-create-light{
+    color: var(--Dark-Grayish-Blue);
+    background-color: var(--Very-Light-Gray);
+
+}
+
+.input-text-create-light::placeholder{
+    color: var(--Light-Grayish-Blue);
+}
+
+
 
 .container-checkbox-create{
     position: absolute;
