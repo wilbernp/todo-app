@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { createTodo, handleCompleteAll, handleLightMode } from "../../redux/slices/todosSlice"
 import moon_icon from "../../assets/images/icon-moon.svg"
 import sun_icon from "../../assets/images/icon-sun.svg"
+import add_icon_dark from "../../assets/images/icon-add-task-dark.svg"
+import add_icon_light from "../../assets/images/icon-add-task-light.svg"
 
 export default function CreateToDo() {
   const [input, setInput] = useState("")
@@ -34,23 +36,27 @@ export default function CreateToDo() {
     <form className='form-create-todo' onSubmit={handleSubmit}>
       <div className="flex-container">
         <h1 className='title-create-todo'>TODO</h1>
-        <img onClick={()=>dispatch(handleLightMode())} className='icon-dark-light-mode' src={lightMode?moon_icon:sun_icon} alt="sun icon" />
+        <img onClick={() => dispatch(handleLightMode())} className='icon-dark-light-mode' src={lightMode ? moon_icon : sun_icon} alt="sun icon" />
       </div>
       <div className='container-input-create'>
         <div>
-          <input 
-          className={`input-text-create ${lightMode && "input-text-create-light"}`} 
-          type="text" 
-          placeholder='Create a new todo...' 
-          value={input} 
-          onChange={(e) => setInput(e.target.value)} />
+          <input
+            className={`input-text-create ${lightMode && "input-text-create-light"}`}
+            type="text"
+            placeholder='Create a new todo...'
+            value={input}
+            onChange={(e) => setInput(e.target.value)} />
         </div>
         <div className='container-checkbox-create'>
-          <Checkbox 
-          handleActive={handleActive} 
-          active={activeChecbox} 
-          lightMode={lightMode}/>
+          <Checkbox
+            handleActive={handleActive}
+            active={activeChecbox}
+            lightMode={lightMode} />
         </div>
+
+        <button className='button-create-todo' type="submit">
+          <img src={lightMode? add_icon_light: add_icon_dark} alt="add icon" />
+        </button>
       </div>
     </form>
   )

@@ -27,7 +27,7 @@ export default function FilterToDo() {
           ))
         }
       </div>
-      <p className='parragraph-drag-drop'>Drag and drop reoder list</p>
+      <p className='parragraph-drag-drop'>Drag and drop reorder list</p>
     </div>
   )
 }
