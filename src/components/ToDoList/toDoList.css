@@ -78,3 +78,7 @@
 .clear-complete-todos{
     text-decoration: none;
 }
+
+.drag{
+   opacity: 0;
+}
