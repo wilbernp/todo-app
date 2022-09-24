@@ -63,19 +63,19 @@ const reducers = {
             case "All":
                 state.typeFilter = payload
                 state.filterTodos = state.todos
-                state.message = "no task created"
+                state.message = "No task created"
                 break;
 
             case "Active":
                 state.typeFilter = payload
                 state.filterTodos = state.todos.filter(todo => !todo.complete)
-                state.message = "there is no pending task"
+                state.message = "There is no pending task"
                 break;
 
             case "Completed":
                 state.typeFilter = payload
                 state.filterTodos = state.todos.filter(todo => todo.complete)
-                state.message = "there is no completed task"
+                state.message = "There is no completed task"
                 break;
 
             default:

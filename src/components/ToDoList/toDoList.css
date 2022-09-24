@@ -79,6 +79,14 @@
     text-decoration: none;
 }
 
-.drag{
-   opacity: 0;
+.chosen{
+    opacity: 0;
 }
+
+.ghost{
+   opacity: 1;
+}
+
+/* .drag{
+   opacity: 0;
+} */

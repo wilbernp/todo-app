@@ -42,6 +42,8 @@ export default function ToDoList() {
                     setList={(list) => dispatch(setTodos(list))}
 
                     dragClass="drag"
+                    chosenClass='chosen'
+                    ghostClass='ghost'
 
                     animation={400}
                     >
