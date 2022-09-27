@@ -19,8 +19,6 @@ Esta es una solución al desafío de la [Todo App en Frontend Mentor](https://ww
 <br/>
 <img src="./src/assets/readme-images/light-desktop.png" width="750">
 <br/>
-<br/>
-<br/>
 
 ### Tamaño Movil
 
