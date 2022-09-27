@@ -19,43 +19,57 @@ Esta es una solución al desafío de la [Todo App en Frontend Mentor](https://ww
 <br/>
 <img src="./src/assets/readme-images/light-desktop.png" width="750">
 <br/>
-<br/>
-<br/>
 
 ### Tamaño Movil
 
-<img src="./src/assets/readme-images/dark-movile.jpeg"  height="400" style="margin-right: 50px;">
+<div style="display: flex;">
+<img src="./src/assets/readme-images/dark-movile.jpeg"  height="400">
 <img src="./src/assets/readme-images/light-movile.jpeg" height="400">
+</div>
+
 
 ### Funcionalidades
 
 - Ver el diseño óptimo para la aplicación según el tamaño de pantalla del dispositivo
 - Agregar un nuevo Todo a la lista
-<br/>
-<img src="./src/assets/readme-images/add-todo.png" style="margin-bottom: 10px;">
+<img src="./src/assets/readme-images/add-todo.png" />
+<hr/>
 
 - Marcar un Todo como completo
-<br/>
-<img src="./src/assets/readme-images/mark-todo.png" style="margin-bottom: 10px;">
-- Marcar todos los Todos como completos
-<br/>
-<img src="./src/assets/readme-images/mark-all.png" style="margin-bottom: 10px;">
-- Eliminar un Todo de la lista
-<br/>
-<img src="./src/assets/readme-images/delete.png" style="margin-bottom: 10px;">
-- Eliminar los Todos completos
-<br/>
-<img src="./src/assets/readme-images/delete-complete.png" style="margin-bottom: 10px;">
-- Filtrar por: todos, activos y completos
-<br/>
-<img src="./src/assets/readme-images/filters.png" style="margin-bottom: 10px;">
-- Alternar modo claro y oscuro
-<br/>
 
-<div style="display: flex; gap: 30px;">
-<img src="./src/assets/readme-images/light-mode.png" style="margin-bottom: 10px; margin-right: 10px; width:30%; height:85px">
-<img src="./src/assets/readme-images/dark-mode.png" style="margin-bottom: 10px; width:30%; height:85px">
+<img src="./src/assets/readme-images/mark-todo.png"/>
+<hr/>
+
+- Marcar todos los Todos como completos
+
+<img src="./src/assets/readme-images/mark-all.png"/>
+<hr/>
+
+- Eliminar un Todo de la lista
+
+<img src="./src/assets/readme-images/delete.png"/>
+<hr/>
+
+- Eliminar los Todos completos
+
+<img src="./src/assets/readme-images/delete-complete.png"/>
+<hr/>
+
+- Filtrar por: todos, activos y completos
+
+<img src="./src/assets/readme-images/filters.png" />
+<hr/>
+
+- Alternar modo claro y oscuro
+
+<div style="display: flex;">
+
+<img src="./src/assets/readme-images/light-mode.png" style="width:30%; height:85px">
+<img src="./src/assets/readme-images/dark-mode.png" style="width:30%; height:85px">
+
 </div>
+<hr/>
+
 - Arrastrar y soltar elementos de la lista para reorganizarlos
 - Mantener datos al recargar la pagina
 
