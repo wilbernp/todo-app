@@ -51,8 +51,11 @@ Esta es una solución al desafío de la [Todo App en Frontend Mentor](https://ww
 <img src="./src/assets/readme-images/filters.png" style="margin-bottom: 10px;">
 - Alternar modo claro y oscuro
 <br/>
+
+<div style="display: flex; gap: 30px;">
 <img src="./src/assets/readme-images/light-mode.png" style="margin-bottom: 10px; margin-right: 10px; width:30%; height:85px">
 <img src="./src/assets/readme-images/dark-mode.png" style="margin-bottom: 10px; width:30%; height:85px">
+</div>
 - Arrastrar y soltar elementos de la lista para reorganizarlos
 - Mantener datos al recargar la pagina
 
