@@ -68,7 +68,6 @@ Esta es una solución al desafío de la [Todo App en Frontend Mentor](https://ww
 <img src="./src/assets/readme-images/dark-mode.png" style="width:30%; height:85px">
 
 </div>
-
 <hr/>
 
 - Arrastrar y soltar elementos de la lista para reorganizarlos

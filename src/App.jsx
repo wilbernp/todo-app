@@ -5,7 +5,7 @@ import CreateToDo from './components/CreateToDo/CreateToDo'
 import FilterToDo from './components/FilterToDo/FilterToDo'
 import ToDoList from './components/ToDoList/ToDoList'
 import { getItemLocalStorage, setItemLocalStorage } from './localStorage/localStorage'
-import { handleFilterTodo, setTodos } from './redux/slices/todosSlice'
+import { handleActiveCheckbox, handleFilterTodo, setTodos } from './redux/slices/todosSlice'
 export default function App() {
   let dispatch = useDispatch()
   let { todos, typeFilter, lightMode } = useSelector(state => state.todos)
@@ -14,6 +14,7 @@ export default function App() {
     console.log("useefect1")
     let todoList = getItemLocalStorage("todos")
     dispatch(setTodos(todoList || []))
+    dispatch(handleActiveCheckbox())
   }, [])
 
   useEffect(() => {
